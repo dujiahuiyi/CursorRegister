@@ -128,7 +128,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 
 适用于手动导入账户令牌(token)或Chat-API没有公网ip的用户。账号注册完成后需手动从工作流程构件(GitHub Artifacts)中下载账号信息。**务必在下载完成后删除网页中的工作流程构件(GitHub Artifacts)以避免数据泄漏**
 
-使用以下参数运行**`Cursor Register`**
+使用以下参数运行 **`Cursor Register`**
 - `Upload account infos to artifact`: 应为 `☑`
 
 ### 注册帐户。将帐户 cookie 令牌上传到 [Chat-API](https://github.com/ai365vip/chat-api)
@@ -138,7 +138,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 - `CURSOR_ONEAPI_TOKEN`: 对应参数 `oneapi_token`
 - `CURSOR_CHANNEL_URL`: 对应参数 `oneapi_channel_url`
 
-请使用以下参数运行 Github Action 管道 **`Cursor Register`**：
+使用以下参数运行 **`Cursor Register`**
 - `将帐户令牌导入 OneAPI`：应为 `☑`
 
 ### 注册帐户。使用 IMAP 服务器接收电子邮件
