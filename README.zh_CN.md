@@ -126,7 +126,8 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 
 ### 注册帐户。从 Github Artifact 下载账户信息和 cookie 令牌。
 
-适用于手动导入账户令牌(token)或Chat-API没有公网ip的用户。账号注册完成后需手动从工作流程构件(GitHub Artifacts)中下载账号信息。**务必在下载完成后删除网页中的工作流程构件(GitHub Artifacts)以避免数据泄漏**
+适用于手动导入账户令牌(token)或Chat-API没有公网ip的用户。账号注册完成后需手动从工作流程构件(GitHub Artifacts)中下载账号信息。
+**务必在下载完成后删除网页中的工作流程构件(GitHub Artifacts)以避免数据泄漏**
 
 使用以下参数运行 **`Cursor Register`**
 - `Upload account infos to artifact`: 应为 `☑`
