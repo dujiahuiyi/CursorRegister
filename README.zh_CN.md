@@ -33,9 +33,9 @@ python cursor_register.py register.number=3
 ```
 - `register.number`：您要注册的账户号
 
-### `config/config.yaml` 中的高级配置
+### 注册机完整配置 `config/config.yaml`
 
-`config.yaml` 描述了注册机的所有参数。如果需要在注册机中接入IMAP或者Chat- API等服务，请在`config.yaml`中进行配置
+`config.yaml` 描述了注册机的所有参数。如果需要在注册机中接入IMAP或者Chat- API等服务，请在`config.yaml`中进行配置。
 
 #### 基本注册配置
 ```
@@ -61,7 +61,7 @@ register:
 
 使用IMAP接受邮箱验证码。
 
-一种使用IMAP接口的实践是手动注册Outlook账号后，将Outlook的邮件转发至自己的邮箱，然后利用其IMAP接口处理验证码。
+一种使用IMAP接口的实践是手动注册Outlook账号后，将Outlook的邮件转发至自己的邮箱，然后利用其IMAP接口处理验证码。注册机支持删除账号后重新注册以获取额度。
 
 ```
 register:
@@ -114,6 +114,7 @@ python tokenManager/oneapi_cursor_cleaner.py --oneapi_url {oneapi_url} --oneapi_
 ## 在 Github Action 中运行 Register
 
 GitHub Action适用于不便在本地搭建环境或本地环境不佳的用户以供试用。
+
 Github Action Pipeline **`Cursor Register`** 提供以下参数：
 - `number`：需要注册的账号数量
 - `max_workers`：线程池的并行度。建议在 Github Action 环境中使用 `1`
@@ -125,20 +126,14 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 
 ### 注册帐户。从 Github Artifact 下载账户信息和 cookie 令牌。
 
-适用于手动导入账户令牌(token)或Chat-API没有公网ip的用户。账号注册完成后需手动从工作流程构件(GitHub Artifacts)中下载账号信息。
-**务必在下载完成后删除网页中的工作流程构件(GitHub Artifacts)以避免数据泄漏**
+适用于手动导入账户令牌(token)或Chat-API没有公网ip的用户。账号注册完成后需手动从工作流程构件(GitHub Artifacts)中下载账号信息。**务必在下载完成后删除网页中的工作流程构件(GitHub Artifacts)以避免数据泄漏**
 
-## 在Github Action中运行
-
-如果没有公网 IP，您可以在运行 GitHub Action 管道后手动下载 `token.csv`。**下载后不要忘记删除工件，以免数据泄露。**
-
-请使用以下参数运行 Github Action 管道 **`Cursor Register`**：
-- `Upload account infos to articulate`：应为 `☑`。
+使用以下参数运行**`Cursor Register`**
+- `Upload account infos to artifact`: 应为 `☑`
 
 ### 注册帐户。将帐户 cookie 令牌上传到 [Chat-API](https://github.com/ai365vip/chat-api)
 
-需检查已添加以下机密(secret)
-
+需检查已在仓库中添加以下机密(secret)：
 - `CURSOR_ONEAPI_URL`: 对应参数 `oneapi_url`
 - `CURSOR_ONEAPI_TOKEN`: 对应参数 `oneapi_token`
 - `CURSOR_CHANNEL_URL`: 对应参数 `oneapi_channel_url`
@@ -148,8 +143,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 
 ### 注册帐户。使用 IMAP 服务器接收电子邮件
 
-需检查已添加以下机密(secret)
-
+需检查已在仓库中添加以下机密(secret)：
 - `CURSOR_IMAP_SERVER`：IMAP 服务器
 - `CURSOR_IMAP_PORT`：IMAP 端口
 - `CURSOR_IMAP_USERNAME`：IMAP 用户名
@@ -161,8 +155,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 
 ### 管理[Chat-API](https://github.com/ai365vip/chat-api)中额度不足的Cursor账号 
 
-需检查已添加以下机密(secret)
-
+需检查已在仓库中添加以下机密(secret)：
 - `CURSOR_ONEAPI_URL`: 对应参数 `oneapi_url`
 - `CURSOR_ONEAPI_TOKEN`: 对应参数 `oneapi_token`
 
