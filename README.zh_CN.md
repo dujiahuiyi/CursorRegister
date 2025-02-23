@@ -124,7 +124,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 
 在仓库中添加机密(secrets)，请参考 [Github 安全指南 - 为存储库创建机密](https://docs.github.com/zh/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)
 
-### 注册帐户。从 Github Artifact 下载账户信息和 cookie 令牌。
+### 注册帐户，并从 Github Artifact 下载账户信息和 token
 
 适用于手动导入账户令牌(token)或Chat-API没有公网ip的用户。账号注册完成后需手动从工作流程构件(GitHub Artifacts)中下载账号信息。
 **务必在下载完成后删除网页中的工作流程构件(GitHub Artifacts)以避免数据泄漏**
@@ -132,7 +132,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 使用以下参数运行 **`Cursor Register`**
 - `Upload account infos to artifact`: 应为 `☑`
 
-### 注册帐户。将帐户 cookie 令牌上传到 [Chat-API](https://github.com/ai365vip/chat-api)
+### 注册帐户，并将帐户 cookie 令牌上传到 [Chat-API](https://github.com/ai365vip/chat-api)
 
 需检查已在仓库中添加以下机密(secret)：
 - `CURSOR_ONEAPI_URL`: 对应参数 `oneapi_url`
@@ -142,7 +142,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 使用以下参数运行 **`Cursor Register`**
 - `将帐户令牌导入 OneAPI`：应为 `☑`
 
-### 注册帐户。使用 IMAP 服务器接收电子邮件
+### 注册帐户，其中使用 IMAP 服务器接收电子邮件
 
 需检查已在仓库中添加以下机密(secret)：
 - `CURSOR_IMAP_SERVER`：IMAP 服务器
