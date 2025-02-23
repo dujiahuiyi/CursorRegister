@@ -140,7 +140,7 @@ Github Action Pipeline **`Cursor Register`** 提供以下参数：
 - `CURSOR_CHANNEL_URL`: 对应参数 `oneapi_channel_url`
 
 使用以下参数运行 **`Cursor Register`**
-- `将帐户令牌导入 OneAPI`：应为 `☑`
+- `Ingest account tokens to OneAPI`:：应为 `☑`
 
 ### 注册帐户，其中使用 IMAP 服务器接收电子邮件
 
