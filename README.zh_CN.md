@@ -89,10 +89,10 @@ imap_email_server:
 
 ```
 oneapi:
-enabled: true
-url: http://localhost:3000
-token: your_oneapi_token
-channel_url: http://localhost:3010
+  enabled: true
+  url: http://localhost:3000
+  token: your_oneapi_token
+  channel_url: http://localhost:3010
 ```
 - `oneapi.enabled`：将数据上传到 Chat-API 时应为 `true`
 - `oneapi.url`：Chat-API 地址
