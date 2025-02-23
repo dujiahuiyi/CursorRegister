@@ -26,7 +26,7 @@
 pip install -r requirements.txt
 ```
 
-### 注册账户
+### 注册账户，并将账号信息保存到csv文件
 
 ```
 python cursor_register.py register.number=3
